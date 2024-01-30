@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.2//EN"
+                               "http://struts.apache.org/dtds/struts-config_1_2.dtd">
+<struts-config>
+ <data-sources/>
+ <form-beans>
+  <form-bean name="GetNameForm" type="demo.GetNameForm"/>
+  <form-bean name="LoginForm" type="com.golfcaddy.struts.form.LoginForm"/>
+ </form-beans>
+ <global-exceptions/>
+ <global-forwards>
+  <forward name="getName" path="/pages/inputname.jsp"/>
+ </global-forwards>
+ <action-mappings>
+  <action name="GetNameForm" path="/greeting" scope="request" type="demo.GreetingAction">
+   <!--																						-->
+   <forward name="sayhello" path="/pages/greeting.jsp"/>
+  </action>
+  <action name="LoginForm" path="/register" type="com.golfcaddy.struts.action.DoRegister">
+   <forward name="success" path="/1-start.jsp"/>
+   <forward name="error" path="/error.jsp"/>
+  </action>
+  <action path="/loginnow" type="com.golfcaddy.struts.action.DoLoggingIn">
+   <forward name="success" path="/3-coursesearch.jsp"/>
+   <forward name="error" path="/1-start.jsp?errorstring=User name or password incorrect."/>
+  </action> 
+  <action path="/coursesearch" type="com.golfcaddy.struts.action.DoCourseSearch">
+   <forward name="success" path="/coursesearch1.jsp"/>
+  </action>
+  
+  <action forward="mainpage.layout" path="/index"/>
+  <action forward="demo" path="/demo"/>
+  <action forward="demoform" path="/demoform"/>
+  <action parameter="methodtocall" path="/addemployeecategory" type="com.esaya.struts.action.addEmployeeMaster"/>
+  <action forward="departments" path="/departments"/>
+  <action parameter="methodtocall" path="/addDepartmentsMaster" type="com.esaya.struts.action.addDepartmentsMaster"/>
+  <action forward="party" path="/party"/>
+  <action forward="particulars" path="/particulars"/>
+  <action parameter="methodtocall" path="/addPartyMaster" type="com.esaya.struts.action.addPartyMaster"/>
+  <action forward="modifyparty" path="/modifyparty"/>
+  <action forward="demoparty" path="/demoparty"/>
+  <action parameter="methodtocall" path="/mailEsaya" type="com.esaya.struts.action.mailEsaya"/>
+  <action forward="dashboard" path="/dashboard"/>
+  <action parameter="methodtocall" path="/addmailboxmaster" type="com.esaya.struts.action.addMailboxMaster"/>
+  <action forward="mailbox" path="/mailbox"/>
+  <action parameter="methodtocall" path="/addUserroleMaster" type="com.esaya.struts.action.addUserroleMaster"/>
+  <action forward="userrole" path="/userrole"/>
+  <action forward="login" path="/login"/> 
+  <action parameter="methodtocall" path="/userlogin" type="com.esaya.struts.action.login"/>
+  <action forward="ticketdashboard" path="/ticketdashboard"/>
+  <action parameter="methodtocall" path="/addMainqueryMaster" type="com.esaya.struts.action.addMainqueryMaster"/>
+  <action forward="mainquery" path="/mainquery"/>
+  <action parameter="methodtocall" path="/addSubqueryMaster" type="com.esaya.struts.action.addSubqueryMaster"/>
+  <action forward="subquery" path="/subquery"/>
+  <action forward="assignticketdashboard" path="/assignticketdashboard"/>
+  <action forward="partyeditgrid" path="/partyeditgrid"/>
+  <action forward="editparty" path="/editparty"/>
+  <action forward="clientparticulars" path="/clientparticulars"/> 
+  <action forward="customermaster" path="/customermaster"/>
+  <action forward="emailtemplate" path="/emailtemplate"/>
+  <action forward="taxhead" path="/taxhead"/>
+  <action forward="bill" path="/bill"/>
+  <action forward="billreferences" path="/billreferences"/>
+  <action forward="subtaxhead" path="/subtaxhead"/>
+  
+  <action parameter="methodtocall" path="/addEmailtemplateMaster" type="com.esaya.struts.action.addEmailtemplateMaster"/>
+  <action parameter="methodtocall" path="/CommonAction" type="com.subodh.struts.action.CommonAction"/>
+  <action parameter="methodtocall" path="/PartyMaster" type="com.subodh.struts.action.PartyMaster"/>
+  <action parameter="methodtocall" path="/ParticularsMaster" type="com.subodh.struts.action.ParticularsMaster"/>
+  <action parameter="methodtocall" path="/ClientParticularsMaster" type="com.subodh.struts.action.ClientParticularsMaster"/>
+  <action parameter="methodtocall" path="/TaxHeadMaster" type="com.subodh.struts.action.TaxHeadMaster"/>
+  <action parameter="methodtocall" path="/Bill" type="com.subodh.struts.action.Bill"/>
+  <action parameter="methodtocall" path="/BillReference" type="com.subodh.struts.action.BillReference"/>
+  <action parameter="methodtocall" path="/SubTaxHeadMaster" type="com.subodh.struts.action.SubTaxHeadMaster"/>
+  
+  </action-mappings>
+ <controller/>
+ <plug-in className="org.apache.struts.tiles.TilesPlugin">
+  <set-property property="moduleAware" value="true"/>
+  <set-property property="definitions-config" value="/WEB-INF/tiles-def.xml"/>
+ </plug-in>
+ <plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+  <set-property property="pathnames" value="/WEB-INF/validator-rules.xml, /WEB-INF/validation.xml"/>
+ </plug-in>
+</struts-config>

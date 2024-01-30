@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblPartyMaster" table="tbl_party_master" catalog="atulmith_subodh">
+        <id name="partyId" type="string">
+            <column name="Party_Id" length="100" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="tblRoleMaster" class="com.subodh.TblRoleMaster" fetch="select">
+            <column name="Role_Id" length="50" />
+        </many-to-one>
+        <property name="partyFname" type="string">
+            <column name="Party_Fname" length="500" />
+        </property>
+        <property name="partyMname" type="string">
+            <column name="Party_Mname" length="500" />
+        </property>
+        <property name="partyLname" type="string">
+            <column name="Party_Lname" length="500" />
+        </property>
+        <property name="cityId" type="string">
+            <column name="City_Id" length="100" />
+        </property>
+        <property name="partyAddress" type="string">
+            <column name="Party_Address" length="500" />
+        </property>
+        <property name="partyPinCode" type="string">
+            <column name="Party_PinCode" length="500" />
+        </property>
+        <property name="partyTypeId" type="string">
+            <column name="PartyType_Id" length="100" />
+        </property>
+        <property name="partyStatus" type="string">
+            <column name="Party_Status" length="500" />
+        </property>
+        <property name="partyIsInternal" type="string">
+            <column name="Party_IsInternal" length="500" />
+        </property>
+        <property name="partyDepTypeId" type="string">
+            <column name="PartyDepType_Id" length="100" />
+        </property>
+        <property name="empCatId" type="string">
+            <column name="EmpCat_Id" length="100" />
+        </property>
+        <property name="partyUsername" type="string">
+            <column name="Party_Username" length="500" />
+        </property>
+        <property name="partyPass" type="string">
+            <column name="Party_Pass" length="500" />
+        </property>
+        <property name="partyEmailFooter" type="string">
+            <column name="Party_EmailFooter" length="500" />
+        </property>
+        <property name="partyRegDate" type="string">
+            <column name="Party_RegDate" length="500" />
+        </property>
+        <property name="partyEmailid" type="string">
+            <column name="Party_Emailid" length="50" />
+        </property>
+        <property name="partyPhonenos" type="string">
+            <column name="Party_Phonenos" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

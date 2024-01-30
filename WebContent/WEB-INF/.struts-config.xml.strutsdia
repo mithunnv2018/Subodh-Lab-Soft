@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="StrutsProcess">
+ <PROCESS-ITEM ID="getName" NAME="forward0" PATH="/pages/inputname.jsp"
+  SHAPE="24,41,93,27" TARGET="page0" TITLE="getName" TYPE="forward" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page0" PATH="/pages/inputname.jsp"
+  SHAPE="192,42,56,46" SUBTYPE="jsp" TITLE="inputname.jsp" TYPE="page" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="link0" PATH="/greeting.do"
+   SUBTYPE="confirmed" TARGET="action0" TITLE="greeting.do" TYPE="link" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#greeting" NAME="action0" PATH="/greeting"
+  SHAPE="368,41,123,43" TITLE="GetNameForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="sayhello" NAME="forward0"
+   PATH="/pages/greeting.jsp" TARGET="page1" TITLE="sayhello"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page1" PATH="/pages/greeting.jsp"
+  SHAPE="568,42,56,30" SUBTYPE="jsp" TITLE="greeting.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#register" NAME="action1" PATH="/register"
+  SHAPE="32,129,0,0" TITLE="LoginForm" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0" PATH="/1-start.jsp"
+   TARGET="page2" TITLE="success" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1" PATH="/error.jsp"
+   TARGET="page3" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page2" PATH="/1-start.jsp" SHAPE="240,146,0,0"
+  SUBTYPE="html" TITLE="1-start.html" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page3" PATH="/error.jsp" SHAPE="240,241,0,0"
+  SUBTYPE="jsp" TITLE="error.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#loginnow" NAME="action2" PATH="/loginnow"
+  SHAPE="32,385,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/3-coursesearch.jsp" TARGET="page5" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+  <PROCESS-ITEM-OUTPUT ID="error" NAME="forward1"
+   PATH="/1-start.jsp?errorstring=User name or password incorrect."
+   TARGET="page2" TITLE="error" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page4" PATH="/index.jsp" SHAPE="240,402,0,0"
+  SUBTYPE="jsp" TITLE="index.jsp" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page5" PATH="/3-coursesearch.jsp"
+  SHAPE="240,497,0,0" SUBTYPE="jsp" TITLE="3-coursesearch.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#coursesearch" NAME="action3" PATH="/coursesearch"
+  SHAPE="32,641,0,0" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT ID="success" NAME="forward0"
+   PATH="/coursesearch1.jsp" TARGET="page6" TITLE="success"
+   TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page6" PATH="/coursesearch1.jsp"
+  SHAPE="240,658,0,0" SUBTYPE="jsp" TITLE="coursesearch1.jsp"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#index" NAME="action4" PATH="/index"
+  SHAPE="32,753,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action4" PATH="mainpage.layout"
+   TARGET="page7" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page7" PATH="mainpage.layout" SHAPE="240,770,0,0"
+  SUBTYPE="tile" TITLE="mainpage.layout" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM NAME="page8" PATH="demo" SHAPE="240,882,0,0"
+  SUBTYPE="tile" TITLE="demo" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#demoform" NAME="action6" PATH="/demoform"
+  SHAPE="32,977,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action6" PATH="demoform" TARGET="page9"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page9" PATH="demoform" SHAPE="240,994,0,0"
+  SUBTYPE="tile" TITLE="demoform" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addemployeecategory" NAME="action7"
+  PATH="/addemployeecategory" SHAPE="32,1089,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#departments" NAME="action8" PATH="/departments"
+  SHAPE="32,1089,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action8" PATH="departments" TARGET="page11"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page11" PATH="departments" SHAPE="240,1201,0,0"
+  SUBTYPE="tile" TITLE="departments" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#demo" NAME="action5" PATH="/demo" SHAPE="32,865,0,0"
+  SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action5" PATH="demo" TARGET="page8"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM ID="#addDepartmentsMaster" NAME="action9"
+  PATH="/addDepartmentsMaster" SHAPE="32,1425,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#party" NAME="action10" PATH="/party"
+  SHAPE="32,1313,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action10" PATH="party" TARGET="page12"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page12" PATH="party" SHAPE="240,1330,0,0"
+  SUBTYPE="tile" TITLE="party" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addPartyMaster" NAME="action11"
+  PATH="/addPartyMaster" SHAPE="240,1441,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#modifyparty" NAME="action12" PATH="/modifyparty"
+  SHAPE="448,1425,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action12" PATH="modifyparty"
+   TARGET="page10" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page10" PATH="modifyparty" SHAPE="656,1425,0,0"
+  SUBTYPE="tile" TITLE="modifyparty" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#demoparty" NAME="action13" PATH="/demoparty"
+  SHAPE="32,1537,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action13" PATH="demoparty" TARGET="page13"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page13" PATH="demoparty" SHAPE="240,1554,0,0"
+  SUBTYPE="tile" TITLE="demoparty" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mailEsaya" NAME="action14" PATH="/mailEsaya"
+  SHAPE="32,1649,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#dashboard" NAME="action15" PATH="/dashboard"
+  SHAPE="32,1649,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action15" PATH="dashboard" TARGET="page14"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page14" PATH="dashboard" SHAPE="240,1666,0,0"
+  SUBTYPE="tile" TITLE="dashboard" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addmailboxmaster" NAME="action16"
+  PATH="/addmailboxmaster" SHAPE="32,1761,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mailbox" NAME="action17" PATH="/mailbox"
+  SHAPE="32,1761,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action17" PATH="mailbox" TARGET="page15"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page15" PATH="mailbox" SHAPE="240,1778,0,0"
+  SUBTYPE="tile" TITLE="mailbox" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addUserroleMaster" NAME="action18"
+  PATH="/addUserroleMaster" SHAPE="32,1985,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#userrole" NAME="action19" PATH="/userrole"
+  SHAPE="32,1873,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action19" PATH="userrole" TARGET="page16"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page16" PATH="userrole" SHAPE="448,1873,0,0"
+  SUBTYPE="tile" TITLE="userrole" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#login" NAME="action20" PATH="/login"
+  SHAPE="32,1985,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action20" PATH="login" TARGET="page18"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page18" PATH="login" SHAPE="240,2002,0,0"
+  SUBTYPE="tile" TITLE="login" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#userlogin" NAME="action21" PATH="/userlogin"
+  SHAPE="32,2097,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#ticketdashboard" NAME="action22"
+  PATH="/ticketdashboard" SHAPE="32,2097,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action22" PATH="ticketdashboard"
+   TARGET="page17" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page17" PATH="ticketdashboard" SHAPE="240,2114,0,0"
+  SUBTYPE="tile" TITLE="ticketdashboard" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addMainqueryMaster" NAME="action23"
+  PATH="/addMainqueryMaster" SHAPE="32,2209,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#mainquery" NAME="action24" PATH="/mainquery"
+  SHAPE="32,2209,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action24" PATH="mainquery" TARGET="page19"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page19" PATH="mainquery" SHAPE="240,2226,0,0"
+  SUBTYPE="tile" TITLE="mainquery" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#addSubqueryMaster" NAME="action25"
+  PATH="/addSubqueryMaster" SHAPE="32,2433,0,0" TYPE="action" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#subquery" NAME="action26" PATH="/subquery"
+  SHAPE="32,2321,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action26" PATH="subquery" TARGET="page20"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page20" PATH="subquery" SHAPE="240,2338,0,0"
+  SUBTYPE="tile" TITLE="subquery" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#assignticketdashboard" NAME="action27"
+  PATH="/assignticketdashboard" SHAPE="32,2433,0,0" SUBTYPE="forward"
+  TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action27" PATH="assignticketdashboard"
+   TARGET="page21" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page21" PATH="assignticketdashboard"
+  SHAPE="448,2433,0,0" SUBTYPE="tile" TITLE="assignticketdashboard"
+  TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#partyeditgrid" NAME="action28" PATH="/partyeditgrid"
+  SHAPE="32,2545,0,0" SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action28" PATH="partyeditgrid"
+   TARGET="page22" TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page22" PATH="partyeditgrid" SHAPE="240,2562,0,0"
+  SUBTYPE="tile" TITLE="partyeditgrid" TYPE="page" model-entity="StrutsProcessItem"/>
+ <PROCESS-ITEM ID="#editparty" NAME="action29" PATH="/editparty"
+  SUBTYPE="forward" TYPE="action" model-entity="StrutsProcessItem">
+  <PROCESS-ITEM-OUTPUT NAME="action29" PATH="editparty" TARGET="page23"
+   TITLE="forward" TYPE="forward" model-entity="StrutsProcessItemOutput"/>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="page23" PATH="editparty" SUBTYPE="tile"
+  TITLE="editparty" TYPE="page" model-entity="StrutsProcessItem"/>
+</PROCESS>

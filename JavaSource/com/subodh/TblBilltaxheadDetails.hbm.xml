@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblBilltaxheadDetails" table="tbl_billtaxhead_details" catalog="atulmith_subodh">
+        <id name="billtaxId" type="string">
+            <column name="billtax_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="billNos" type="string">
+            <column name="bill_nos" length="50" />
+        </property>
+        <property name="taxheadId" type="string">
+            <column name="taxhead_id" length="50" />
+        </property>
+        <property name="billtaxPercent" type="java.lang.Double">
+            <column name="billtax_percent" precision="22" scale="0" />
+        </property>
+        <property name="billtaxAmount" type="java.lang.Double">
+            <column name="billtax_amount" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

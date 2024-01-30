@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblStateMaster" table="tbl_state_master" catalog="atulmith_subodh">
+        <id name="stateId" type="string">
+            <column name="State_Id" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="stateName" type="string">
+            <column name="State_Name" length="500" />
+        </property>
+        <property name="stateCode" type="string">
+            <column name="State_Code" length="500" />
+        </property>
+        <property name="countryId" type="string">
+            <column name="Country_Id" length="100" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="500" />
+        </property>
+        <set name="tblCityMasters" table="tbl_city_master" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="State_Id" length="100" />
+            </key>
+            <one-to-many class="com.subodh.TblCityMaster" />
+        </set>
+    </class>
+</hibernate-mapping>

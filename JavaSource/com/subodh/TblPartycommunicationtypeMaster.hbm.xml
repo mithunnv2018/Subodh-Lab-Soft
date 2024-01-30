@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblPartycommunicationtypeMaster" table="tbl_partycommunicationtype_master" catalog="atulmith_subodh">
+        <id name="partyComTypeId" type="string">
+            <column name="PartyComType_Id" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="partyComTypeName" type="string">
+            <column name="PartyComType_Name" length="500" />
+        </property>
+        <set name="tblPartycommuncationDetailses" table="tbl_partycommuncation_details" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="PartyComType_Id" length="100" />
+            </key>
+            <one-to-many class="com.subodh.TblPartycommuncationDetails" />
+        </set>
+    </class>
+</hibernate-mapping>

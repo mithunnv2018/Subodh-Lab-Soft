@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblTaxheadMaster" table="tbl_taxhead_master" catalog="atulmith_subodh">
+        <id name="taxheadId" type="string">
+            <column name="taxhead_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="taxheadName" type="string">
+            <column name="taxhead_name" length="300" not-null="true" />
+        </property>
+        <property name="taxheadPercent" type="double">
+            <column name="taxhead_percent" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="taxheadYear" type="string">
+            <column name="taxhead_year" length="50" not-null="true" />
+        </property>
+        <property name="taxheadStatus" type="string">
+            <column name="taxhead_status" length="50" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

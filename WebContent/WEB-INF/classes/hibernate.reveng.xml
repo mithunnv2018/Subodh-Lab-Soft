@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-catalog="atulmith_essaya" match-name="tbl_mailtype_master"/>
+  <table-filter match-catalog="atulmith_essaya" match-name="tbl_emailconfig_master"/>
+</hibernate-reverse-engineering>

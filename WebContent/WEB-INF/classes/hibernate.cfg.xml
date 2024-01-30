@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory name="SessionFactoryName">
+  <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+  <property name="hibernate.c3p0.acquire_increment">2</property>
+  <property name="hibernate.c3p0.idle_test_period">3600</property>
+  <property name="hibernate.c3p0.max_size">10</property>
+  <property name="hibernate.c3p0.max_statements">0</property>
+  <property name="hibernate.c3p0.min_size">2</property> 
+  <property name="hibernate.c3p0.timeout">5000</property>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+  <property name="hibernate.connection.password">pass</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/atulmith_subodh</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <property name="hibernate.search.autoregister_listeners">false</property>
+  <mapping resource="com/subodh/TblCountryMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblStateMaster.hbm.xml"/>
+
+  <mapping resource="com/subodh/TblCityMaster.hbm.xml"/>
+ 
+  <mapping resource="com/subodh/TblPartycommuncationDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblPartycommunicationtypeMaster.hbm.xml"/>
+
+  <mapping resource="com/subodh/TblPartydepartmenttypeMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblPartyMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblPartytypeMaster.hbm.xml"/>
+   <mapping resource="com/subodh/TblParticularsMaster.hbm.xml"/>
+  
+  <mapping resource="com/subodh/TblRunningidMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblYearMaster.hbm.xml"/>
+
+ 
+  <mapping resource="com/subodh/TblRoleMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblRoledetailMaster.hbm.xml"/>
+
+  <mapping resource="com/subodh/TblPartyemailconfigDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblClientpricelistDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblClientpricelistMaster.hbm.xml"/>
+  <mapping resource="com/subodh/VwClientpricelistDetails.hbm.xml"/>
+  <mapping resource="com/subodh/VwTaxheadAcyear.hbm.xml"/>
+  <mapping resource="com/subodh/TblAcyearMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblTaxheadMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblBillreferencesMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblSubtaxheadMaster.hbm.xml"/>
+  <mapping resource="com/subodh/TblBillDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblBillparticularsDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblBillreferencesDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblBillsubtaxheadDetails.hbm.xml"/>
+  <mapping resource="com/subodh/TblBilltaxheadDetails.hbm.xml"/>
+  <!--   <mapping resource="com/mciter/commonbeans/TblTypingtestSession.hbm.xml"/> -->
+ </session-factory>
+</hibernate-configuration>

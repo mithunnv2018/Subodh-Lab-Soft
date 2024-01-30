@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblRoleMaster" table="tbl_role_master" catalog="atulmith_subodh">
+        <id name="roleId" type="string">
+            <column name="Role_Id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="roleName" type="string">
+            <column name="Role_Name" length="300" />
+        </property>
+        <property name="status" type="string">
+            <column name="status" length="50" />
+        </property>
+        <set name="tblPartyMasters" table="tbl_party_master" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Role_Id" length="50" />
+            </key>
+            <one-to-many class="com.subodh.TblPartyMaster" />
+        </set>
+        <set name="tblRoledetailMasters" table="tbl_roledetail_master" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="Role_Id" length="50" />
+            </key>
+            <one-to-many class="com.subodh.TblRoledetailMaster" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblClientpricelistDetails" table="tbl_clientpricelist_details" catalog="atulmith_subodh">
+        <id name="clientpricedetId" type="java.lang.Integer">
+            <column name="clientpricedet_id" />
+            <generator class="identity" />
+        </id>
+        <property name="clientpriceId" type="string">
+            <column name="clientprice_id" length="50" not-null="true" />
+        </property>
+        <property name="particularsId" type="string">
+            <column name="particulars_id" length="50" not-null="true" />
+        </property>
+        <property name="clientpricedetDisc" type="double">
+            <column name="clientpricedet_disc" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="clientpricedetAmt" type="double">
+            <column name="clientpricedet_amt" precision="22" scale="0" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

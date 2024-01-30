@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblAcyearMaster" table="tbl_acyear_master" catalog="atulmith_subodh">
+        <id name="acyearId" type="string">
+            <column name="acyear_id" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="acyearName" type="string">
+            <column name="acyear_name" length="50" />
+        </property>
+        <property name="acyearText" type="string">
+            <column name="acyear_text" length="50" />
+        </property>
+        <property name="acyearFromdate" type="timestamp">
+            <column name="acyear_fromdate" length="19" />
+        </property>
+        <property name="acyearTodate" type="timestamp">
+            <column name="acyear_todate" length="19" />
+        </property>
+        <property name="acyearCurrentyear" type="string">
+            <column name="acyear_currentyear" length="50" />
+        </property>
+    </class>
+</hibernate-mapping>

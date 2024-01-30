@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 1.1//EN"
+                                   "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+<tiles-definitions>
+ <definition name="mainpage.layout" path="/mainroot.jsp">
+  <put name="header" value="header.jsp"/>
+  <put name="headertop" value="header-top.jsp"/>
+  <put name="headermenu" value="header-menu.jsp"/>
+  <put name="bodytop" value="body-top.jsp"/>
+  <put name="bodybottom" value="body-bottom.jsp"/>
+  <put name="footer" value="footer.jsp"/>
+  <put name="body" value="empty.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="demo">
+  <put name="body" value="error.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="demoform">
+  <put name="body" value="demoform.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="departments">
+  <put name="body" value="departments.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="party">
+  <put name="body" value="party.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="particulars">
+  <put name="body" value="particulars.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="modifyparty">
+  <put name="body" value="modifyparty.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="demoparty">
+  <put name="body" value="demoparty.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="dashboard">
+  <put name="body" value="dashboard.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="mailbox">
+  <put name="body" value="mailbox.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="userrole">
+  <put name="body" value="userroles.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="login">
+  <put name="body" value="login.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="ticketdashboard">
+  <put name="body" value="ticketdashboard.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="mainquery">
+  <put name="body" value="mainquery.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="subquery">
+  <put name="body" value="subquery.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="assignticketdashboard">
+  <put name="body" value="assignticketdashboard.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="partyeditgrid">
+  <put name="body" value="partyeditgrid.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="editparty">
+  <put name="body" value="editparty.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="emailtemplate">
+  <put name="body" value="emailtemplate.jsp"/>
+ </definition>
+  <definition extends="mainpage.layout" name="customermaster">
+  <put name="body" value="customermaster.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="clientparticulars">
+  <put name="body" value="clientparticulars.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="taxhead">
+  <put name="body" value="taxhead.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="bill">
+  <put name="body" value="bill.jsp"/>
+ </definition>
+<definition extends="mainpage.layout" name="billreferences">
+  <put name="body" value="billreferences.jsp"/>
+ </definition>
+ <definition extends="mainpage.layout" name="subtaxhead">
+  <put name="body" value="subtaxhead.jsp"/>
+ </definition>
+</tiles-definitions>

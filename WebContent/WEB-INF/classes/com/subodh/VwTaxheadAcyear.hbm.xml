@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.VwTaxheadAcyear" table="vw_taxhead_acyear" catalog="atulmith_subodh">
+        <composite-id name="id" class="com.subodh.VwTaxheadAcyearId">
+            <key-property name="acyearId" type="string">
+                <column name="acyear_id" length="50" />
+            </key-property>
+            <key-property name="acyearName" type="string">
+                <column name="acyear_name" length="50" />
+            </key-property>
+            <key-property name="acyearText" type="string">
+                <column name="acyear_text" length="50" />
+            </key-property>
+            <key-property name="acyearFromdate" type="timestamp">
+                <column name="acyear_fromdate" length="19" />
+            </key-property>
+            <key-property name="acyearTodate" type="timestamp">
+                <column name="acyear_todate" length="19" />
+            </key-property>
+            <key-property name="acyearCurrentyear" type="string">
+                <column name="acyear_currentyear" length="50" />
+            </key-property>
+            <key-property name="taxheadId" type="string">
+                <column name="taxhead_id" length="50" />
+            </key-property>
+            <key-property name="taxheadName" type="string">
+                <column name="taxhead_name" length="300" />
+            </key-property>
+            <key-property name="taxheadPercent" type="double">
+                <column name="taxhead_percent" precision="22" scale="0" />
+            </key-property>
+            <key-property name="taxheadYear" type="string">
+                <column name="taxhead_year" length="50" />
+            </key-property>
+            <key-property name="taxheadStatus" type="string">
+                <column name="taxhead_status" length="50" />
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Jan 4, 2014 4:28:33 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="com.subodh.TblYearMaster" table="tbl_year_master" catalog="atulmith_subodh">
+        <id name="yearName" type="string">
+            <column name="Year_Name" length="100" />
+            <generator class="assigned" />
+        </id>
+        <property name="yearAliasName" type="string">
+            <column name="Year_AliasName" length="500" />
+        </property>
+        <property name="yearFromdate" type="timestamp">
+            <column name="Year_Fromdate" length="19" />
+        </property>
+        <property name="yearTodate" type="timestamp">
+            <column name="Year_Todate" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>
